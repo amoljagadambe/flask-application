@@ -12,7 +12,7 @@ Install
     git tag  # shows the tagged versions
     git checkout latest-tag-found-above
     
-Create a virtualenv in the AccentGURU directory and activate it::
+Create a virtualenv in the flask-application directory and activate it::
 
     python -m venv venv
     venv\Scripts\activate.bat
