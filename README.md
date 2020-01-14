@@ -26,6 +26,8 @@ Install Dependencies in Virtual Environment::
  
  On Virtual Environment::
     
+    set APP_SETTINGS=config.cfg
+    set FLASK_APP=run.py
     flask run
     
 Open http://127.0.0.1:5000 in a browser.

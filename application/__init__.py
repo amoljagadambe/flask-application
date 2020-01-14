@@ -7,7 +7,8 @@ CORS(app)
 
 app.config.from_envvar('APP_SETTINGS')
 
-api = Api(app, title='Basic App', description='Created by Amol Jagadambe', default='Flask', default_label='Controllers',
+api = Api(app, title='Basic App', description='Created by Amol Jagadambe',
+          default='Flask', default_label='Controllers', doc='/swagger-ui',
           validate=True)
 
 from application.resources import home
