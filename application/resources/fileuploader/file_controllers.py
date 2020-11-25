@@ -1,6 +1,6 @@
 from application.resources.fileuploader.file_handler import FileHandler
-from application.resources.recommender.user_input import upload_parser
-from flask_restplus import Resource
+from application.resources.utils.user_input import upload_parser
+from flask_restx import Resource
 from application import api
 from flask import request
 
