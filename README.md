@@ -1,7 +1,8 @@
 flask-application
 -------
 
-Basic flask application Architecture
+Basic flask application architecture with swagger and docker integrated.this application has to resource one is file uploader 
+and second one is reommender which is content based recommendation 
 
 Install
 -------
@@ -24,10 +25,14 @@ Install Dependencies in Virtual Environment::
  RUN
  ---
  
- On Virtual Environment::
+ On Local Virtual Environment::
     
-    set APP_SETTINGS=config.cfg
-    set FLASK_APP=run.py
     flask run
+ 
+ On Docker::
     
-Open http://127.0.0.1:5000 in a browser.
+    $ docker image build -t flask-app .
+    
+    $ docker run -p 3000:3000 -d flask-app
+
+Open http://127.0.0.1:3000 in a browser. to access all the api over swagger just add /swagger-ui.html/ at the end of url.
