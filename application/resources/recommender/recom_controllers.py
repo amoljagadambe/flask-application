@@ -1,11 +1,12 @@
-from application.resources.recommender.user_input import user_fields
+from application.resources.utils.user_input import user_fields
 from application.resources.recommender.feat_extraction import User
 from application.resources.recommender import recommendation
-from flask_restplus import Resource
+from flask_restx import Resource
 from application import api
 from flask import request
 
 recommender = api.namespace('giveRecommendation', description='Operations related to Recommendation')
+
 
 @recommender.route('/', endpoint='/giveRecommendation')
 class recommenderController(Resource):

@@ -1,5 +1,3 @@
-import pandas as pd
-
 
 class User:
     def __init__(self, org={}):

@@ -25,6 +25,7 @@ count = CountVectorizer()
 count_matrix = count.fit_transform(df['bag_of_words'])
 indices = pd.Series(df.index)
 
+
 def recommendations(words):
     recommended_words = []
     cosine_sim = cosine_similarity(count_matrix, count_matrix)
@@ -39,4 +40,3 @@ def recommendations(words):
         recommended_words.append(list(df.index)[i])
 
     return recommended_words
-
