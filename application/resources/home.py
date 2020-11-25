@@ -1,3 +1,2 @@
-from application.resources.recommender.recom_controllers import recommenderController
-from application.resources.database.db_controllers import databaseController
-from application.resources.fileuploader.file_controllers import fileUploaderController
+from application import api, app, resources
+
