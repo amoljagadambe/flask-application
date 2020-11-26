@@ -1,8 +1,8 @@
 flask-application
 -------
 
-Basic flask application architecture with swagger and docker integrated.this application has to resource one is file uploader 
-and second one is reommender which is content based recommendation 
+Basic flask application architecture with swagger and docker integrated.this application has two resource one is file uploader 
+and second one is recommender which is content based recommendation 
 
 Install
 -------
