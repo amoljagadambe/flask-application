@@ -35,4 +35,14 @@ Install Dependencies in Virtual Environment::
     
     $ docker run -p 3000:3000 -d flask-app
 
-Open http://127.0.0.1:3000 in a browser. to access all the api over swagger just add /swagger-ui.html/ at the end of url.
+Save/Load the docker image(optional)
+----
+this below queries will save you the hassle of downloading the images from docker hub and increase the speed of
+execution, but ***this is optional you dont need to do this***. 
+
+    $ docker save flask-app > flask-app.tar
+    
+    $ docker load --input flask-app.tar
+
+Open http://127.0.0.1:3000 in a browser. to access all the api over swagger just add /swagger-ui.html/ at the 
+end of url.
