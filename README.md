@@ -33,7 +33,7 @@ Install Dependencies in Virtual Environment::
     
     $ docker image build -t flask-app .
     
-    $docker run -p 8000:8000 -d --name flask-application flask-app
+    $ docker run -p 8000:8000 -d --name flask-application flask-app
 
 Save/Load the docker image(optional)
 ----
