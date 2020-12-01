@@ -4,13 +4,13 @@ from flask_restx import Resource
 from application import api
 from flask import request
 
-file = api.namespace('fileUploader', description='Operations related to fileUploader')
+file = api.namespace('fileUploader', description='Operations related to File Uploader')
 
 
 @file.route('/', endpoint='/fileUploader')
-class fileUploaderController(Resource):
+class FileUploaderController(Resource):
 
     @api.expect(upload_parser, validate=False)
     def post(self):
-        FileHandler().saveFile(request)
+        FileHandler().save_file(request)
         return "file successfully saved"
