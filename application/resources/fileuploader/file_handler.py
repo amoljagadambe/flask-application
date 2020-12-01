@@ -2,8 +2,7 @@ from werkzeug.utils import secure_filename
 from application import app
 import os
 
-
-ALLOWED_EXTENSIONS = set(['wav','mp3'])
+ALLOWED_EXTENSIONS = set(['wav', 'mp3'])
 BASE_FOLDER = os.path.abspath(os.path.dirname(__name__))
 UPLOAD_PATH = "/application/resources/fileuploader/audio-files/"
 
@@ -19,15 +18,15 @@ class FileHandler:
     def __init__(self):
         print("File handler init")
 
-    def saveFile(self, request):
+    @staticmethod
+    def save_file(request):
         if 'file' not in request.files:
-            print("No file found")
             return "No file found"
 
         file = request.files['file']
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            completeFileName = (os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            file.save(completeFileName)
+            file_path = (os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            file.save(file_path)
 
-        return completeFileName
+        return file_path
