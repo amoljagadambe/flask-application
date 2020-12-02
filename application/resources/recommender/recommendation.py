@@ -5,9 +5,9 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 # code to read the xlsx File
 filepath = os.path.abspath(os.path.dirname(__name__))
-sheetname = 'commonwordswithIPA'
+sheet_name = 'commonwordswithIPA'
 filename = filepath + '/application/resources/recommender/files/AccentGURU.xlsx'
-df = pd.read_excel(filename, sheet_name=sheetname)
+df = pd.read_excel(filename, sheet_name=sheet_name)
 df = df[['word', 'category', 'word_s1', 'word_s2', 'word_s3', 'word_s4', 'phase', 'primary_syllable_stress']]
 df.set_index('word', inplace=True)
 df['bag_of_words'] = ''
@@ -29,7 +29,7 @@ indices = pd.Series(df.index)
 def recommendations(words):
     recommended_words = []
     cosine_sim = cosine_similarity(count_matrix, count_matrix)
-    # gettin the index of the words that matches the word
+    # getting the index of the words that matches the word
     idx = indices[indices == words].index[0]
     # creating a Series with the similarity scores in descending order
     score_series = pd.Series(cosine_sim[idx]).sort_values(ascending=False)
