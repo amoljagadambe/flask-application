@@ -10,9 +10,9 @@ class User:
         self.phase = org['phase']
         self.primary_syllable_stress = org['primary_syllable_stress']
 
-    def preProcessing(self):
-        sampleString = self.__dict__
-        for key, value in list(sampleString.items()):
+    def pre_processing(self):
+        sample_string = self.__dict__
+        for key, value in list(sample_string.items()):
             if value == 'string' or value == '':
-                del sampleString[key]
-        return sampleString
+                del sample_string[key]
+        return sample_string

@@ -1,1 +1,1 @@
-from application.resources.recommender.recom_controllers import recommenderController
+from application.resources.recommender.recom_controllers import RecommendationController
